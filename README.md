@@ -1,5 +1,9 @@
 # Multinex reproduction (course project)
 
+소스 코드, 실행 로그 및 결과 이미지는 이 GitHub 저장소에서 확인하실 수 있습니다: `scripts/` (소스 코드), `logs/` (실행 로그), `results/` (결과 이미지).
+
+Live demo: https://multinex-demo.vercel.app
+
 Reproduction of Multinex (CVPR 2026) from the official repo
 https://github.com/albrateanu/Multinex at commit `e15790a963935569fff1ba6a8b0d33a791765749`.
 This repo holds only our scripts, logs and results. It does not contain the model code,
