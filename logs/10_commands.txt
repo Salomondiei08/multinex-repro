@@ -1,0 +1,6 @@
+cd ~/multinex_repro/Multinex && python ../scripts/prep_my_photos.py
+python Enhancement/test_noref.py --opt Options/Multinex_LOL-v1.yaml --weights pretrained_weights/Multinex_LOL-v1.pth --input_dirs ../my_inputs_resized --result_dir results/my_photos/Multinex_LOL-v1 --gpus 7
+python Enhancement/test_noref.py --opt Options/Multinex-Nano_LOL-v1.yaml --weights pretrained_weights/Multinex-Nano_LOL-v1.pth --input_dirs ../my_inputs_resized --result_dir results/my_photos/Multinex-Nano_LOL-v1 --gpus 7
+python Enhancement/test_noref.py --opt Options/Multinex_LOL-v2-synthetic.yaml --weights pretrained_weights/Multinex_dagger_NoRef.pth --input_dirs ../my_inputs_resized --result_dir results/my_photos/Multinex_NoRef --gpus 7
+python Enhancement/test_noref.py --opt Options/Multinex-Nano_LOL-v2-synthetic.yaml --weights pretrained_weights/Multinex-Nano_dagger_NoRef.pth --input_dirs ../my_inputs_resized --result_dir results/my_photos/Multinex-Nano_NoRef --gpus 7
+CUDA_VISIBLE_DEVICES=7 PHYS_GPU=7 python ../scripts/measure_my_photos.py

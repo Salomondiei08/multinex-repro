@@ -29,3 +29,11 @@ Timings are upper bounds because the GPUs were shared with other jobs. Full numb
 `logs/` holds the raw logs of every step, `fixes.md` and `commands.txt`.
 `scripts/` holds our helper scripts. `results/` holds results.json, the per-image CSV,
 the figures and interpretation.md.
+
+## Photo test (step 7)
+No own photos were taken. Five free-licensed phone night photos from Wikimedia Commons
+(`logs/10_my_photos.txt` lists author, license and EXIF) were resized to 1200 px and run
+through both models. Run with `scripts/prep_my_photos.py`, the four `test_noref.py` commands in
+`logs/10_commands.txt`, and `scripts/measure_my_photos.py`. Results are in
+`results/my_photo_results.json`, `results/my_photo_notes.md` and the `results/my_photo_*.png` figures.
+`results/README_submission.md` is the short Korean/English submission summary.

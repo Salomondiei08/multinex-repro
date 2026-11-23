@@ -1,0 +1,29 @@
+$ python Enhancement/test_noref.py --opt Options/Multinex_LOL-v1.yaml --weights pretrained_weights/Multinex_LOL-v1.pth --input_dirs ../my_inputs_resized --result_dir results/my_photos/Multinex_LOL-v1 --gpus 7
+/home/nlp-07/multinex_repro/Multinex/basicsr/models/image_restoration_model.py:69: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.amp_scaler = GradScaler(enabled=self.use_amp)
+export CUDA_VISIBLE_DEVICES=7
+Loading weights: /home/nlp-07/multinex_repro/Multinex/pretrained_weights/Multinex_LOL-v1.pth
+Not using Automatic Mixed Precision
+self.C = 45
+self.C = 28
+self.C = 36
+self.C = 41
+self.C = 38
+self.C = 40
+self.C = 39
+self.C = 39
+self.C = 39
+self.C = 39
+
+=== Dataset: my_inputs_resized ===
+Images (my_inputs_resized):   0%|          | 0/5 [00:00<?, ?it/s]/home/nlp-07/miniforge3/envs/multinex/lib/python3.9/site-packages/numpy/_core/fromnumeric.py:3596: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/nlp-07/miniforge3/envs/multinex/lib/python3.9/site-packages/numpy/_core/_methods.py:138: RuntimeWarning: invalid value encountered in divide
+  ret = ret.dtype.type(ret / rcount)
+Images (my_inputs_resized):  20%|██        | 1/5 [00:01<00:05,  1.39s/it]Images (my_inputs_resized):  40%|████      | 2/5 [00:02<00:03,  1.17s/it]Images (my_inputs_resized):  60%|██████    | 3/5 [00:03<00:02,  1.15s/it]Images (my_inputs_resized):  80%|████████  | 4/5 [00:04<00:01,  1.20s/it]Images (my_inputs_resized): 100%|██████████| 5/5 [00:06<00:00,  1.23s/it]Images (my_inputs_resized): 100%|██████████| 5/5 [00:06<00:00,  1.22s/it]
+
+--- my_inputs_resized Results ---
+Weights: Multinex_LOL-v1
+NIQE:    3.6306
+BRISQUE: 34.2491
+exit 0

@@ -1,0 +1,32 @@
+Photos: no own photos were provided; at the user's request these are phone photos downloaded from
+Wikimedia Commons (free licenses, originals with EXIF, SHA-1 checked: logs/10_download_photos.log).
+2014-12-20_02_47_13_Sodium_vapor_and_mercury_vapor_street_lights_at_night_on_the_same_utility_pole_on_an_alley_adjacent_to_Winthrop_Avenue_in_Ewing_New_Jersey.JPG
+  original 3264x2448, EXIF orientation 1, after rotation 3264x2448, resized 1200x900 -> sodium_streetlights.png
+  EXIF date: 2014:12:20 02:47:13
+  EXIF device: Apple iPhone 5
+  source: https://commons.wikimedia.org/wiki/File:2014-12-20_02_47_13_Sodium_vapor_and_mercury_vapor_street_lights_at_night_on_the_same_utility_pole_on_an_alley_adjacent_to_Winthrop_Avenue_in_Ewing,_New_Jersey.JPG
+  author: Famartin, license: CC BY-SA 4.0
+Barely_Lit_245984597_.jpeg
+  original 2048x1149, EXIF orientation 1, after rotation 2048x1149, resized 1200x673 -> barely_lit.png
+  EXIF date: 2018:01:06 00:10:05
+  EXIF device: LGE LG-H815
+  source: https://commons.wikimedia.org/wiki/File:Barely_Lit_(245984597).jpeg
+  author: Ryan Bodenstein, license: CC BY 3.0
+Budapest_20260412_223533.jpg
+  original 2296x4080, EXIF orientation 0, after rotation 2296x4080, resized 675x1200 -> budapest_street.png
+  EXIF date: 2026:04:12 22:35:35
+  EXIF device: motorola moto g13
+  source: https://commons.wikimedia.org/wiki/File:Budapest_20260412_223533.jpg
+  author: Vauia Rex, license: CC0
+Project_366_327_221116_On_Cobbled_Lanes_Explored_-_Flickr_-_comedy_nose.jpg
+  original 1994x2994, EXIF orientation 1, after rotation 1994x2994, resized 799x1200 -> cobbled_lanes.png
+  EXIF date: 2016:11:22 17:50:26
+  EXIF device: Nokia Lumia 920
+  source: https://commons.wikimedia.org/wiki/File:Project_366_%5E327,_221116_On_Cobbled_Lanes_(Explored)_-_Flickr_-_comedy_nose.jpg
+  author: Pete from Liverpool, UK, license: CC BY 2.0
+Zounohana_Park_Light_up_6.jpg
+  original 3264x2448, EXIF orientation 1, after rotation 3264x2448, resized 1200x900 -> zounohana_park.png
+  EXIF date: 2013:10:16 22:05:38
+  EXIF device: SAMSUNG SC-03E
+  source: https://commons.wikimedia.org/wiki/File:Zounohana_Park_(Light_up)_6.jpg
+  author: Thirteen-fri, license: CC BY-SA 3.0
