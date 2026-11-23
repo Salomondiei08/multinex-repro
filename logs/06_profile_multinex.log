@@ -1,0 +1,47 @@
+/home/nlp-07/multinex_repro/Multinex/basicsr/models/image_restoration_model.py:69: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.amp_scaler = GradScaler(enabled=self.use_amp)
+Not using Automatic Mixed Precision
+self.C = 45
+self.C = 28
+self.C = 36
+self.C = 41
+self.C = 38
+self.C = 40
+self.C = 39
+self.C = 39
+self.C = 39
+self.C = 39
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                       aten::layer_norm         0.03%      69.070us         0.49%       1.156ms      48.158us       0.000us         0.00%     173.727ms       7.239ms            24  
+                                aten::native_layer_norm         0.15%     345.559us         0.46%       1.087ms      45.280us     173.482ms        72.81%     173.727ms       7.239ms            24  
+void at::native::(anonymous namespace)::RowwiseMomen...         0.00%       0.000us         0.00%       0.000us       0.000us     164.491ms        69.04%     164.491ms       6.854ms            24  
+                                           aten::conv2d         0.03%      77.329us         1.28%       3.042ms      54.314us       0.000us         0.00%      23.775ms     424.552us            56  
+                                      aten::convolution         0.06%     153.880us         1.25%       2.964ms      52.933us       0.000us         0.00%      23.775ms     424.552us            56  
+                                     aten::_convolution         0.13%     317.100us         1.18%       2.810ms      50.185us       0.000us         0.00%      23.775ms     424.552us            56  
+                                              aten::mul         0.27%     646.819us         0.45%       1.062ms      18.629us      19.309ms         8.10%      19.309ms     338.756us            57  
+                                aten::cudnn_convolution         0.53%       1.259ms         0.82%       1.940ms      35.924us      15.409ms         6.47%      15.409ms     285.346us            54  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      13.469ms         5.65%      13.469ms     498.847us            27  
+void conv2d_c1_k1_nhwc_kernel<float, float, float, f...         0.00%       0.000us         0.00%       0.000us       0.000us       9.786ms         4.11%       9.786ms     271.824us            36  
+void at::native::(anonymous namespace)::LayerNormFor...         0.00%       0.000us         0.00%       0.000us       0.000us       8.991ms         3.77%       8.991ms     374.636us            24  
+                                              aten::add         0.11%     268.900us         0.19%     443.670us      14.312us       6.556ms         2.75%       6.556ms     211.483us            31  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 237.842ms
+Self CUDA time total: 238.254ms
+
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                  cudaDeviceSynchronize        95.13%     226.258ms        95.13%     226.258ms     113.129ms       0.000us         0.00%       0.000us       0.000us             2  
+                                           aten::conv2d         0.03%      77.329us         1.28%       3.042ms      54.314us       0.000us         0.00%      23.775ms     424.552us            56  
+                                      aten::convolution         0.06%     153.880us         1.25%       2.964ms      52.933us       0.000us         0.00%      23.775ms     424.552us            56  
+                                     aten::_convolution         0.13%     317.100us         1.18%       2.810ms      50.185us       0.000us         0.00%      23.775ms     424.552us            56  
+                                       cudaLaunchKernel         1.17%       2.789ms         1.17%       2.789ms       7.097us       0.000us         0.00%       0.000us       0.000us           393  
+                                           aten::linear         0.08%     191.900us         0.95%       2.261ms      47.099us       0.000us         0.00%     185.667us       3.868us            48  
+                                aten::cudnn_convolution         0.53%       1.259ms         0.82%       1.940ms      35.924us      15.409ms         6.47%      15.409ms     285.346us            54  
+                                            aten::addmm         0.49%       1.166ms         0.78%       1.855ms      38.639us     185.667us         0.08%     185.667us       3.868us            48  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 237.842ms
+Self CUDA time total: 238.254ms
+

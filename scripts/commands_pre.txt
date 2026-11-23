@@ -1,0 +1,11 @@
+cd ~/multinex_repro && git clone https://github.com/albrateanu/Multinex.git
+cd ~/multinex_repro/Multinex && git checkout e15790a963935569fff1ba6a8b0d33a791765749 && git log -1 > ../logs/02_commit.txt
+wget -q https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh -O /tmp/mf.sh && bash /tmp/mf.sh -b -p ~/miniforge3
+conda create -n multinex python=3.9 -y
+conda activate multinex
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install matplotlib scikit-learn scikit-image opencv-python yacs joblib natsort h5py tqdm tensorboard
+pip install einops gdown addict future lmdb numpy pyyaml requests scipy yapf lpips thop timm pytorch_msssim
+cd ~/multinex_repro/Multinex && pip install -e .
+cd ~/multinex_repro/data_raw && gdown 1vhJg75hIpYvsmryyaxdygAWeHuiY_HWu
+cd ~/multinex_repro && unzip -q -o data_raw/LOLv1.zip -d Multinex/data -x "*.DS_Store"

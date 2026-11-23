@@ -1,0 +1,59 @@
+Retrieving folder contents
+Failed to retrieve folder contents:
+
+	The gdrive folder with url: https://drive.google.com/drive/folders/0B_
+	FjaR958nw_djVQanJqeEhUM1k?hl=en has more than 50 files, gdrive can't
+	download more than this limit.
+
+You can use `--remaining-ok` option to ignore this error.
+Processing file 0B_FjaR958nw_eHhvUUN6MzBCQXc datasets__DICM.zip
+Processing file 0B_FjaR958nw_QUpMeFlmYW5MUVE datasets__LIME.zip
+Processing file 0B_FjaR958nw_NmdONjU1eDJsVW8 datasets__MEF.zip
+Processing file 0B_FjaR958nw_QjFGTHJlZnJLY0E datasets__NPE-ex1.zip
+Processing file 0B_FjaR958nw_X1hRbkJkUkx6MzA datasets__NPE-ex2.zip
+Processing file 0B_FjaR958nw_UDFxeWJPZEd4T2M datasets__NPE-ex3.zip
+Processing file 0B_FjaR958nw_VC1ueFBVWXhkUTA datasets__NPE.zip
+Processing file 0B_FjaR958nw_TXBGSDFfc3ZOODA datasets__VV.zip
+Processing file 0B_FjaR958nw_X0c3ZE1pNzktY28 results__BIMEF@DICM.zip
+Processing file 0B_FjaR958nw_LXRiLXR6cnA4aDQ results__BIMEF@LIME.zip
+Processing file 0B_FjaR958nw_d3ptTDNBTmNzMWM results__BIMEF@MEF.zip
+Processing file 0B_FjaR958nw_cGdleFhES2NaM0U results__BIMEF@NPE-ex1.zip
+Processing file 0B_FjaR958nw_ZGN4TjZkdVIwZnM results__BIMEF@NPE-ex2.zip
+Processing file 0B_FjaR958nw_d3ZJZUNXemI5cTg results__BIMEF@NPE-ex3.zip
+Processing file 0B_FjaR958nw_YkltZmFzaklfVnM results__BIMEF@NPE.zip
+Processing file 0B_FjaR958nw_WFdkQmJ6bE83VHM results__BIMEF@VV.zip
+Processing file 0B_FjaR958nw_a3BuZlZGcGp5bU0 results__dong@DICM.zip
+Processing file 0B_FjaR958nw_Unl0aDZiRW9LeDg results__dong@LIME.zip
+Processing file 0B_FjaR958nw_Tmd1aHp6SGZlMFU results__dong@MEF.zip
+Processing file 0B_FjaR958nw_cUZodTM5NllPMkU results__dong@NPE-ex1.zip
+Processing file 0B_FjaR958nw_NUhHYkRrM191Nlk results__dong@NPE-ex2.zip
+Processing file 0B_FjaR958nw_UTV4VWwxUFppY0E results__dong@NPE-ex3.zip
+Processing file 0B_FjaR958nw_cHFDU0ZQczBMTDQ results__dong@NPE.zip
+Processing file 0B_FjaR958nw_VWk0R3hJNTZsWEE results__dong@VV.zip
+Processing file 0B_FjaR958nw_YjJzaDNPemxadTg results__lime@DICM.zip
+Processing file 0B_FjaR958nw_TDhRRTFIOWZBem8 results__lime@LIME.zip
+Processing file 0B_FjaR958nw_anlISl9IYnR1ZTA results__lime@MEF.zip
+Processing file 0B_FjaR958nw_aUxDbE9CeEVhMkU results__lime@NPE-ex1.zip
+Processing file 0B_FjaR958nw_bl83T0RhWEVpOG8 results__lime@NPE-ex2.zip
+Processing file 0B_FjaR958nw_UHcyV2NwRmhSckU results__lime@NPE-ex3.zip
+Processing file 0B_FjaR958nw_Ui1HOXRJMXdZaGs results__lime@NPE.zip
+Processing file 0B_FjaR958nw_Wm1RZkJOeERmaTA results__lime@VV.zip
+Processing file 0B_FjaR958nw_QUNYbmtBMm1DNDA results__mf@DICM.zip
+Processing file 0B_FjaR958nw_U0xiOHNwWlNZWXc results__mf@LIME.zip
+Processing file 0B_FjaR958nw_dEpoeUJHXzEwcVE results__mf@MEF.zip
+Processing file 0B_FjaR958nw_anJEWXhYV1RGcnM results__mf@NPE-ex1.zip
+Processing file 0B_FjaR958nw_QWppWC1fcHZHZGM results__mf@NPE-ex2.zip
+Processing file 0B_FjaR958nw_R2ZnRWFEUThmMms results__mf@NPE-ex3.zip
+Processing file 0B_FjaR958nw_NzFoaDNYN3REajQ results__mf@NPE.zip
+Processing file 0B_FjaR958nw_QU91NURURlo1aDg results__mf@VV.zip
+Processing file 0B_FjaR958nw_VWRMVUl5aUdzWG8 results__multiscaleRetinex@DICM.zip
+Processing file 0B_FjaR958nw_VGlZZFdJTkI3OUk results__multiscaleRetinex@LIME.zip
+Processing file 0B_FjaR958nw_a2hZQTk2MTNQZGM results__multiscaleRetinex@MEF.zip
+Processing file 0B_FjaR958nw_cWNjcERyWTBXY1E results__multiscaleRetinex@NPE-ex1.zip
+Processing file 0B_FjaR958nw_bXU3bGZ5ekJwbkk results__multiscaleRetinex@NPE-ex2.zip
+Processing file 0B_FjaR958nw_WFg2Y1hta0R2Z1U results__multiscaleRetinex@NPE-ex3.zip
+Processing file 0B_FjaR958nw_Qlc0T2NhcUZrT0k results__multiscaleRetinex@NPE.zip
+Processing file 0B_FjaR958nw_ZVppX2xHS1VGam8 results__multiscaleRetinex@VV.zip
+Processing file 0B_FjaR958nw_MzJSRDBDTUhrYXc results__npe@DICM.zip
+Processing file 0B_FjaR958nw_dFVwSDZxYVZPRFU results__npe@LIME.zip
+EXIT=1

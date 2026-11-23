@@ -1,0 +1,119 @@
++ echo '== date'
+== date
++ date -Is
+2026-11-23T01:20:08+09:00
++ echo '== hostname'
+== hostname
++ hostname
+DICE-58
++ echo '== OS'
+== OS
++ cat /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
++ uname -a
+Linux DICE-58 7.0.0-38-generic #38~24.04.4-Ubuntu SMP PREEMPT_DYNAMIC Mon Sep 14 16:37:11 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
++ echo '== nvidia-smi'
+== nvidia-smi
++ nvidia-smi
+Mon Nov 23 01:20:08 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               Off |   00000000:01:00.0 Off |                  Off |
+| 89%   91C    P2            278W /  300W |   34953MiB /  49140MiB |    100%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA RTX A6000               Off |   00000000:26:00.0 Off |                  Off |
+| 77%   88C    P2            280W /  300W |   34683MiB /  49140MiB |     98%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA RTX A6000               Off |   00000000:41:00.0 Off |                  Off |
+| 86%   90C    P2            251W /  300W |   33005MiB /  49140MiB |    100%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA RTX A6000               Off |   00000000:61:00.0 Off |                  Off |
+|100%   92C    P2            214W /  300W |   35677MiB /  49140MiB |     94%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   4  NVIDIA RTX A6000               Off |   00000000:81:00.0 Off |                  Off |
+| 83%   86C    P2            216W /  300W |   35407MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   5  NVIDIA RTX A6000               Off |   00000000:A1:00.0 Off |                  Off |
+| 76%   87C    P2            283W /  300W |   33527MiB /  49140MiB |     97%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   6  NVIDIA RTX A6000               Off |   00000000:C1:00.0 Off |                  Off |
+| 86%   89C    P2            264W /  300W |   36083MiB /  49140MiB |     99%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   7  NVIDIA RTX A6000               Off |   00000000:E1:00.0 Off |                  Off |
+| 73%   87C    P2            287W /  300W |   35809MiB /  49140MiB |     99%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            4840      G   /usr/lib/xorg/Xorg                        4MiB |
+|    0   N/A  N/A         3874615      C   ...ch/DiffuHTC/.venv/bin/python3      34660MiB |
+|    0   N/A  N/A         3875146      C   ...ch/DiffuHTC/.venv/bin/python3        264MiB |
+|    1   N/A  N/A            4840      G   /usr/lib/xorg/Xorg                        4MiB |
+|    1   N/A  N/A         3875146      C   ...ch/DiffuHTC/.venv/bin/python3      34660MiB |
+|    2   N/A  N/A            4840      G   /usr/lib/xorg/Xorg                        4MiB |
+|    2   N/A  N/A         3874718      C   ...ch/DiffuHTC/.venv/bin/python3      32982MiB |
+|    3   N/A  N/A            4840      G   /usr/lib/xorg/Xorg                        4MiB |
+|    3   N/A  N/A         3876985      C   ...ch/DiffuHTC/.venv/bin/python3      35384MiB |
+|    3   N/A  N/A         3877643      C   ...ch/DiffuHTC/.venv/bin/python3        264MiB |
+|    4   N/A  N/A            4840      G   /usr/lib/xorg/Xorg                        4MiB |
+|    4   N/A  N/A         3877643      C   ...ch/DiffuHTC/.venv/bin/python3      35384MiB |
+|    5   N/A  N/A            4840      G   /usr/lib/xorg/Xorg                        4MiB |
+|    5   N/A  N/A         3877084      C   ...ch/DiffuHTC/.venv/bin/python3      33504MiB |
+|    6   N/A  N/A            4840      G   /usr/lib/xorg/Xorg                        4MiB |
+|    6   N/A  N/A         3877250      C   ...ch/DiffuHTC/.venv/bin/python3      35790MiB |
+|    6   N/A  N/A         3878064      C   ...ch/DiffuHTC/.venv/bin/python3        264MiB |
+|    7   N/A  N/A            4840      G   /usr/lib/xorg/Xorg                        4MiB |
+|    7   N/A  N/A         3878064      C   ...ch/DiffuHTC/.venv/bin/python3      35786MiB |
++-----------------------------------------------------------------------------------------+
++ echo '== nvcc'
+== nvcc
++ /usr/local/cuda/bin/nvcc --version
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Fri_Feb_21_20:23:50_PST_2025
+Cuda compilation tools, release 12.8, V12.8.93
+Build cuda_12.8.r12.8/compiler.35583870_0
++ echo '== system python'
+== system python
++ python3 --version
+Python 3.12.3
+== conda env python
+/home/nlp-07/miniforge3/envs/multinex/bin/python
+Python 3.9.23
+torch 2.7.1+cu118
+torch.version.cuda 11.8
+cudnn 90100
+cuda_available True
+gpu_count 8
+gpu0_name NVIDIA RTX A6000
+platform Linux-7.0.0-38-generic-x86_64-with-glibc2.39
+== driver
+580.178.04

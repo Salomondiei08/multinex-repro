@@ -1,0 +1,18 @@
+# run from ~/multinex_repro/Multinex inside conda env 'multinex'
+[05a Multinex LOL-v1, attempt 1] python Enhancement/test.py --opt Options/Multinex_LOL-v1.yaml --weights pretrained_weights/Multinex_LOL-v1.pth --dataset LOL-v1
+[05b Nano LOL-v1, attempt 1] python Enhancement/test.py --opt Options/Multinex-Nano_LOL-v1.yaml --weights pretrained_weights/Multinex-Nano_LOL-v1.pth --dataset LOL-v1
+[06 per-image Multinex] python ../scripts/per_image_metrics.py --opt Options/Multinex_LOL-v1.yaml --weights pretrained_weights/Multinex_LOL-v1.pth --model_name Multinex --test_log ../logs/05a_multinex_lolv1_attempt1.log --out_csv ../logs/06_per_image_Multinex.csv
+[06 per-image Multinex-Nano] python ../scripts/per_image_metrics.py --opt Options/Multinex-Nano_LOL-v1.yaml --weights pretrained_weights/Multinex-Nano_LOL-v1.pth --model_name Multinex-Nano --test_log ../logs/05b_nano_lolv1_attempt1.log --out_csv ../logs/06_per_image_Multinex-Nano.csv
+[06 complexity Multinex] CUDA_VISIBLE_DEVICES=6 python -m basicsr.complexity --opt Options/Multinex_LOL-v1.yaml --device cuda --warmup 10 --runs 50 --resolutions 400x600,1080x1920,256x256
+[06 complexity Multinex-Nano] CUDA_VISIBLE_DEVICES=6 python -m basicsr.complexity --opt Options/Multinex-Nano_LOL-v1.yaml --device cuda --warmup 10 --runs 50 --resolutions 400x600,1080x1920,256x256
+[06 diag profiler] CUDA_VISIBLE_DEVICES=6 python ../scripts/profile_ops.py Options/Multinex_LOL-v1.yaml
+[07a NoRef Multinex, attempt 1 (README packages only)] python Enhancement/test_noref.py --opt Options/Multinex_LOL-v2-synthetic.yaml --weights pretrained_weights/Multinex_dagger_NoRef.pth --input_dirs ../my_inputs --result_dir results/Multinex_NoRef
+[07 fix] pip install piq
+[07 noref data] cd data_raw/bimef && gdown --folder https://drive.google.com/drive/folders/0B_FjaR958nw_djVQanJqeEhUM1k
+[07 noref data] cd data_raw/bimef && gdown 0B_FjaR958nw_eHhvUUN6MzBCQXc -O datasets__DICM.zip
+[07 noref data] cd data_raw/bimef && gdown 0B_FjaR958nw_QUpMeFlmYW5MUVE -O datasets__LIME.zip
+[07 noref data] cd data_raw/bimef && gdown 0B_FjaR958nw_NmdONjU1eDJsVW8 -O datasets__MEF.zip
+[07 noref data] cd data_raw/bimef && gdown 0B_FjaR958nw_VC1ueFBVWXhkUTA -O datasets__NPE.zip
+[07b NoRef Multinex, after piq fix] python Enhancement/test_noref.py --opt Options/Multinex_LOL-v2-synthetic.yaml --weights pretrained_weights/Multinex_dagger_NoRef.pth --input_dirs data/DICM data/MEF data/NPE data/LIME --result_dir results/Multinex_NoRef
+[07c NoRef Nano, after piq fix] python Enhancement/test_noref.py --opt Options/Multinex-Nano_LOL-v2-synthetic.yaml --weights pretrained_weights/Multinex-Nano_dagger_NoRef.pth --input_dirs data/DICM data/MEF data/NPE data/LIME --result_dir results/Multinex-Nano_NoRef
+[10 vram + mine substitute measurements] CUDA_VISIBLE_DEVICES=6 python ../scripts/measure_v2.py

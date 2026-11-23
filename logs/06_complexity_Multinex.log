@@ -1,0 +1,57 @@
+== nvidia-smi before
+index, name, utilization.gpu [%], memory.used [MiB]
+0, NVIDIA RTX A6000, 69 %, 35013 MiB
+1, NVIDIA RTX A6000, 99 %, 34743 MiB
+2, NVIDIA RTX A6000, 100 %, 33005 MiB
+3, NVIDIA RTX A6000, 88 %, 35677 MiB
+4, NVIDIA RTX A6000, 99 %, 35407 MiB
+5, NVIDIA RTX A6000, 97 %, 33527 MiB
+6, NVIDIA RTX A6000, 95 %, 36083 MiB
+7, NVIDIA RTX A6000, 96 %, 35809 MiB
+[complexity] network_g (raw) = OrderedDict([('type', 'Multinex'), ('in_ch', 3), ('out_ch', 3), ('base_channels', 40),
+             ('width_mult', 2.0), ('use_depthwise', True), ('act', 'ReLU'),
+             ('per_illum_proj', False), ('per_chroma_proj', False), ('use_illum_attn', True),
+             ('use_chroma_attn', True), ('i ...
+[complexity] network_g (normalized) = OrderedDict([('type', 'Multinex'), ('in_ch', 3), ('out_ch', 3), ('base_channels', 40),
+             ('width_mult', 2.0), ('use_depthwise', True), ('act', 'ReLU'),
+             ('per_illum_proj', False), ('per_chroma_proj', False), ('use_illum_attn', True),
+             ('use_chroma_attn', True), ('i ...
+self.C = 45
+self.C = 28
+self.C = 36
+self.C = 41
+self.C = 38
+self.C = 40
+self.C = 39
+self.C = 39
+self.C = 39
+self.C = 39
+
+======================================================================================
+ Model Complexity & Speed (multiple input resolutions) 
+======================================================================================
+Network type     : Multinex
+Params           : 44,620  (~0.045 M | ~44.62 K)
+Device           : cuda   |   Inference (AMP): off
+Timing config    : warmup=10  runs=50
+
+Per-resolution results:
+  Resolution |     GFLOPs |  mean(ms) |   median |      p95 |      p99 |      std |      FPS
+--------------------------------------------------------------------------------------------
+     400x600 |      9.297 |   190.974 |  218.408 |  243.197 |  247.185 |   50.425 |     5.24
+   1080x1920 |     80.329 |  1593.531 | 1579.707 | 1658.805 | 1662.863 |   52.973 |     0.63
+     256x256 |      2.539 |    55.403 |   64.750 |   68.875 |   68.937 |   14.105 |    18.05
+
+======================================================================================
+
+EXIT=0
+== nvidia-smi after
+index, utilization.gpu [%], memory.used [MiB]
+0, 93 %, 35013 MiB
+1, 94 %, 34743 MiB
+2, 99 %, 33005 MiB
+3, 93 %, 35677 MiB
+4, 58 %, 35407 MiB
+5, 98 %, 33527 MiB
+6, 99 %, 36083 MiB
+7, 100 %, 35809 MiB

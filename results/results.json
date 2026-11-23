@@ -1,0 +1,129 @@
+{
+  "gpu": "NVIDIA RTX A6000",
+  "gpu_count": 8,
+  "driver": "580.178.04",
+  "cuda_driver": "13.0",
+  "cuda_torch": "11.8",
+  "cudnn": "90100",
+  "torch": "2.7.1+cu118",
+  "python": "3.9.23",
+  "commit": "e15790a963935569fff1ba6a8b0d33a791765749",
+  "commit_date": "Mon Oct 5 17:43:26 2026 +0100",
+  "install_method": "conda",
+  "commands": [
+    "cd ~/multinex_repro && git clone https://github.com/albrateanu/Multinex.git",
+    "cd ~/multinex_repro/Multinex && git checkout e15790a963935569fff1ba6a8b0d33a791765749 && git log -1 > ../logs/02_commit.txt",
+    "wget -q https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh -O /tmp/mf.sh && bash /tmp/mf.sh -b -p ~/miniforge3",
+    "conda create -n multinex python=3.9 -y",
+    "conda activate multinex",
+    "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118",
+    "pip install matplotlib scikit-learn scikit-image opencv-python yacs joblib natsort h5py tqdm tensorboard",
+    "pip install einops gdown addict future lmdb numpy pyyaml requests scipy yapf lpips thop timm pytorch_msssim",
+    "cd ~/multinex_repro/Multinex && pip install -e .",
+    "cd ~/multinex_repro/data_raw && gdown 1vhJg75hIpYvsmryyaxdygAWeHuiY_HWu",
+    "cd ~/multinex_repro && unzip -q -o data_raw/LOLv1.zip -d Multinex/data -x \"*.DS_Store\"",
+    "python Enhancement/test.py --opt Options/Multinex_LOL-v1.yaml --weights pretrained_weights/Multinex_LOL-v1.pth --dataset LOL-v1",
+    "python Enhancement/test.py --opt Options/Multinex-Nano_LOL-v1.yaml --weights pretrained_weights/Multinex-Nano_LOL-v1.pth --dataset LOL-v1",
+    "python ../scripts/per_image_metrics.py --opt Options/Multinex_LOL-v1.yaml --weights pretrained_weights/Multinex_LOL-v1.pth --model_name Multinex --test_log ../logs/05a_multinex_lolv1_attempt1.log --out_csv ../logs/06_per_image_Multinex.csv",
+    "python ../scripts/per_image_metrics.py --opt Options/Multinex-Nano_LOL-v1.yaml --weights pretrained_weights/Multinex-Nano_LOL-v1.pth --model_name Multinex-Nano --test_log ../logs/05b_nano_lolv1_attempt1.log --out_csv ../logs/06_per_image_Multinex-Nano.csv",
+    "CUDA_VISIBLE_DEVICES=6 python -m basicsr.complexity --opt Options/Multinex_LOL-v1.yaml --device cuda --warmup 10 --runs 50 --resolutions 400x600,1080x1920,256x256",
+    "CUDA_VISIBLE_DEVICES=6 python -m basicsr.complexity --opt Options/Multinex-Nano_LOL-v1.yaml --device cuda --warmup 10 --runs 50 --resolutions 400x600,1080x1920,256x256",
+    "CUDA_VISIBLE_DEVICES=6 python ../scripts/profile_ops.py Options/Multinex_LOL-v1.yaml",
+    "python Enhancement/test_noref.py --opt Options/Multinex_LOL-v2-synthetic.yaml --weights pretrained_weights/Multinex_dagger_NoRef.pth --input_dirs ../my_inputs --result_dir results/Multinex_NoRef",
+    "pip install piq",
+    "cd data_raw/bimef && gdown --folder https://drive.google.com/drive/folders/0B_FjaR958nw_djVQanJqeEhUM1k",
+    "cd data_raw/bimef && gdown 0B_FjaR958nw_eHhvUUN6MzBCQXc -O datasets__DICM.zip",
+    "cd data_raw/bimef && gdown 0B_FjaR958nw_QUpMeFlmYW5MUVE -O datasets__LIME.zip",
+    "cd data_raw/bimef && gdown 0B_FjaR958nw_NmdONjU1eDJsVW8 -O datasets__MEF.zip",
+    "cd data_raw/bimef && gdown 0B_FjaR958nw_VC1ueFBVWXhkUTA -O datasets__NPE.zip",
+    "python Enhancement/test_noref.py --opt Options/Multinex_LOL-v2-synthetic.yaml --weights pretrained_weights/Multinex_dagger_NoRef.pth --input_dirs data/DICM data/MEF data/NPE data/LIME --result_dir results/Multinex_NoRef",
+    "python Enhancement/test_noref.py --opt Options/Multinex-Nano_LOL-v2-synthetic.yaml --weights pretrained_weights/Multinex-Nano_dagger_NoRef.pth --input_dirs data/DICM data/MEF data/NPE data/LIME --result_dir results/Multinex-Nano_NoRef",
+    "CUDA_VISIBLE_DEVICES=6 python ../scripts/measure_v2.py"
+  ],
+  "fixes": [
+    "`which conda` returned nothing on server9 -> conda is not installed on the machine -> installed Miniforge3 in ~/miniforge3 (user space), then ran the README conda commands unchanged",
+    "ModuleNotFoundError: No module named 'piq' (Enhancement/test_noref.py line 40) -> test_noref.py imports piq for BRISQUE but piq is not in the README pip list -> pip install piq (piq==0.8.0, no other package changed)",
+    "gdown --folder: 'Failed to retrieve folder contents ... has more than 50 files' -> README has no link for DICM/LIME/MEF/NPE and the BIMEF Drive folder that hosts them exceeds gdown's 50-file folder limit -> downloaded the four datasets__*.zip files by file ID"
+  ],
+  "data": {
+    "lolv1_test_pairs": 15,
+    "how_downloaded": "gdown 1vhJg75hIpYvsmryyaxdygAWeHuiY_HWu (README LOL-v1 Google Drive link) -> LOLv1.zip, unzipped to Multinex/data/LOLv1/{Train,Test}/{input,target}; Test has 15 input + 15 target PNGs (600x400). No-reference sets: BIMEF Google Drive datasets__{DICM,LIME,MEF,NPE}.zip by file ID (DICM: 69 files, LIME: 10 files, MEF: 17 files, NPE: 8 files)"
+  },
+  "lolv1": {
+    "multinex": {
+      "psnr": 23.1828,
+      "ssim": 0.8426,
+      "lpips": 0.124836,
+      "psnr_y": 26.2776,
+      "ssim_y": 0.9206,
+      "params": 44620,
+      "ms_600x400": 190.974,
+      "ms_1080p": 1593.531,
+      "vram_mb": 424.51220703125
+    },
+    "nano": {
+      "psnr": 19.4172,
+      "ssim": 0.7422,
+      "lpips": 0.276419,
+      "psnr_y": 22.1368,
+      "ssim_y": 0.8454,
+      "params": 696,
+      "ms_600x400": 1.01,
+      "ms_1080p": 15.341,
+      "vram_mb": 53.75830078125
+    }
+  },
+  "best_image": {
+    "name": "665.png",
+    "psnr_multinex": 27.905455382865693,
+    "psnr_nano": 21.59597640923932
+  },
+  "worst_image": {
+    "name": "547.png",
+    "psnr_multinex": 16.075690235435225,
+    "psnr_nano": 17.670401249110434
+  },
+  "mine": [
+    {
+      "file": "DICM/18.JPG",
+      "resolution": "640x480",
+      "niqe_input": 6.9711047617796105,
+      "niqe_multinex": 3.211393,
+      "brisque_input": 44.88397216796875,
+      "brisque_multinex": 23.468933,
+      "ms_multinex": 265.1130882743746
+    },
+    {
+      "file": "LIME/3.bmp",
+      "resolution": "500x375",
+      "niqe_input": 2.856715647045675,
+      "niqe_multinex": 2.747006,
+      "brisque_input": 13.94793701171875,
+      "brisque_multinex": 18.952332,
+      "ms_multinex": 174.77560210041702
+    },
+    {
+      "file": "MEF/Memorial.png",
+      "resolution": "341x512",
+      "niqe_input": 3.3955612398145356,
+      "niqe_multinex": 2.816448,
+      "brisque_input": 6.64569091796875,
+      "brisque_multinex": 7.430359,
+      "ms_multinex": 157.77329878881574
+    },
+    {
+      "file": "NPE/rail.jpg",
+      "resolution": "448x300",
+      "niqe_input": 3.6019122598474613,
+      "niqe_multinex": 3.532729,
+      "brisque_input": 4.75750732421875,
+      "brisque_multinex": 2.822937,
+      "ms_multinex": 123.82863041013479
+    }
+  ],
+  "other_runs": "README no-reference run (dagger NoRef weights), NIQE/BRISQUE per dataset: DICM: Multinex 3.5697/17.0102, Nano 3.655/17.4048; LIME: Multinex 3.6048/13.3962, Nano 3.9167/14.5438; MEF: Multinex 3.1862/11.8548, Nano 3.4472/12.5519; NPE: Multinex 3.834/13.1432, Nano 3.9402/13.6987. GFLOPs at 256x256 (repo basicsr/complexity.py, thop): Multinex 2.539, Nano 0.043. vram_mb at 1920x1080: Multinex 3569.6650390625, Nano 393.0390625. Independent per-image re-run (scripts/per_image_metrics.py) reproduced the test.py means for both models. LOL-v2, self-ensemble, GT-mean: NOT RUN (not requested).",
+  "failures": [
+    "Step 7 own photo: NOT RUN. No own photo was provided (~/multinex_repro/my_inputs stayed empty). At the user's request the README no-reference benchmarks were used instead; 'mine' holds the median-NIQE image of each dataset (DICM, LIME, MEF, NPE)."
+  ],
+  "notes": "All 8 GPUs were shared with another user's jobs at 90-100% utilization for the whole session, so ms values are upper bounds. Multinex is slow for 44.6K params: torch.profiler shows aten::native_layer_norm at 72.81% of CUDA time at 400x600 (channels-last LayerNorm in Multinex_arch.py). ms_600x400/ms_1080p: repo basicsr/complexity.py, random input, 10 warm-up + 50 timed runs, CUDA events + torch.cuda.synchronize, fp32, batch 1, cudnn.benchmark on. ms_multinex in 'mine': 10 warm-up + 50 timed, torch.cuda.synchronize + perf_counter, dagger NoRef weights, input padded to a multiple of 32 as test_noref.py does. vram_mb = torch.cuda.max_memory_allocated for one 600x400 forward (pretrained LOL-v1 weights, inference_mode). mean_brightness = mean of all uint8 RGB values (0-255). Visual (from the side-by-side PNGs): Nano shows colour casts (beige on LOL 547, navy on DICM/18, blue/orange blotches on MEF) with blotchy noise in dark areas; Multinex is close to ground truth on LOL but on DICM/18 stays under-exposed with a green cast. test_noref.py printed 'RuntimeWarning: Mean of empty slice' inside NIQE during DICM; all 104 per-image NIQE/BRISQUE values per model are finite, so no image was dropped from the averages. Warnings: FutureWarning for torch.cuda.amp.GradScaler in basicsr/models/image_restoration_model.py (harmless). README self-ensemble example names Multinex_LOLv1.pth / LOL_v1, but the file is Multinex_LOL-v1.pth."
+}

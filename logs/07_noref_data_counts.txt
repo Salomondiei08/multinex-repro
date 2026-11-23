@@ -1,0 +1,8 @@
+DICM: 69 files
+LIME: 10 files
+MEF: 17 files
+NPE: 8 files
+5ec41f43d38c7f014f908c5a54b5ce4dadcc12d2b327a0da9c1476768a89883b  ../data_raw/bimef/datasets__DICM.zip
+e987917764149bc53dc9789ce904b6e45cf06a3e984da9c90c0ba56db7107102  ../data_raw/bimef/datasets__LIME.zip
+646fa441670412bc012c8355de64c5a93a5e3e9e27e80321eeb51a91247674ef  ../data_raw/bimef/datasets__MEF.zip
+8cf23c81701f768c13d9142157bd7512af7167a1caaf444b9b70a78df08fa33b  ../data_raw/bimef/datasets__NPE.zip

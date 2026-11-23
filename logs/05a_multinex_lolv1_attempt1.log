@@ -1,0 +1,35 @@
+/home/nlp-07/miniforge3/envs/multinex/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/nlp-07/miniforge3/envs/multinex/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+export CUDA_VISIBLE_DEVICES=0
+dataset LOL-v1
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Downloading: "https://download.pytorch.org/models/alexnet-owt-7be5be79.pth" to /home/nlp-07/.cache/torch/hub/checkpoints/alexnet-owt-7be5be79.pth
+  0%|          | 0.00/233M [00:00<?, ?B/s]  3%|▎         | 7.62M/233M [00:00<00:03, 73.9MB/s]  9%|▊         | 19.9M/233M [00:00<00:02, 105MB/s]  13%|█▎        | 31.1M/233M [00:00<00:01, 110MB/s] 18%|█▊        | 42.4M/233M [00:00<00:01, 113MB/s] 23%|██▎       | 53.6M/233M [00:00<00:01, 115MB/s] 28%|██▊       | 64.9M/233M [00:00<00:01, 116MB/s] 33%|███▎      | 76.1M/233M [00:00<00:01, 116MB/s] 37%|███▋      | 87.4M/233M [00:00<00:01, 117MB/s] 42%|████▏     | 98.5M/233M [00:00<00:01, 113MB/s] 47%|████▋     | 110M/233M [00:01<00:01, 117MB/s]  52%|█████▏    | 122M/233M [00:01<00:00, 117MB/s] 57%|█████▋    | 133M/233M [00:01<00:00, 117MB/s] 62%|██████▏   | 144M/233M [00:01<00:00, 117MB/s] 67%|██████▋   | 156M/233M [00:01<00:00, 117MB/s] 72%|███████▏  | 167M/233M [00:01<00:00, 117MB/s] 76%|███████▋  | 178M/233M [00:01<00:00, 117MB/s] 81%|████████  | 189M/233M [00:01<00:00, 117MB/s] 86%|████████▌ | 200M/233M [00:01<00:00, 117MB/s] 91%|█████████ | 212M/233M [00:01<00:00, 117MB/s] 96%|█████████▌| 223M/233M [00:02<00:00, 117MB/s]100%|██████████| 233M/233M [00:02<00:00, 115MB/s]
+/home/nlp-07/multinex_repro/Multinex/basicsr/models/image_restoration_model.py:69: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.amp_scaler = GradScaler(enabled=self.use_amp)
+Loading model from: /home/nlp-07/miniforge3/envs/multinex/lib/python3.9/site-packages/lpips/weights/v0.1/alex.pth
+Not using Automatic Mixed Precision
+self.C = 45
+self.C = 28
+self.C = 36
+self.C = 41
+self.C = 38
+self.C = 40
+self.C = 39
+self.C = 39
+self.C = 39
+self.C = 39
+===>Testing using weights:  pretrained_weights/Multinex_LOL-v1.pth
+data/LOLv1/Test/input
+data/LOLv1/Test/target
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:00<00:11,  1.27it/s] 13%|█▎        | 2/15 [00:01<00:06,  1.92it/s] 20%|██        | 3/15 [00:01<00:05,  2.13it/s] 27%|██▋       | 4/15 [00:01<00:04,  2.25it/s] 33%|███▎      | 5/15 [00:02<00:04,  2.30it/s] 40%|████      | 6/15 [00:02<00:03,  2.45it/s] 47%|████▋     | 7/15 [00:03<00:02,  2.67it/s] 53%|█████▎    | 8/15 [00:03<00:02,  2.62it/s] 60%|██████    | 9/15 [00:03<00:02,  2.54it/s] 67%|██████▋   | 10/15 [00:04<00:01,  2.51it/s] 73%|███████▎  | 11/15 [00:04<00:01,  2.63it/s] 80%|████████  | 12/15 [00:04<00:01,  2.60it/s] 87%|████████▋ | 13/15 [00:05<00:00,  2.54it/s] 93%|█████████▎| 14/15 [00:05<00:00,  2.50it/s]100%|██████████| 15/15 [00:06<00:00,  2.59it/s]100%|██████████| 15/15 [00:06<00:00,  2.43it/s]
+RGB  - PSNR: 23.1828
+RGB  - SSIM: 0.8426
+LPIPS (alex): 0.124836
+Y    - PSNR_y: 26.2776
+Y    - SSIM_y: 0.9206
+Ch   - PSNR_c: 32.5227   (avg of Cb & Cr)
+Ch   - SSIM_c: 0.9165   (avg of Cb & Cr)
+EXIT=0

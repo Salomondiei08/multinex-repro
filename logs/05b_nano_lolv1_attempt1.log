@@ -1,0 +1,33 @@
+/home/nlp-07/miniforge3/envs/multinex/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/nlp-07/miniforge3/envs/multinex/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/nlp-07/multinex_repro/Multinex/basicsr/models/image_restoration_model.py:69: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.amp_scaler = GradScaler(enabled=self.use_amp)
+export CUDA_VISIBLE_DEVICES=0
+dataset LOL-v1
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /home/nlp-07/miniforge3/envs/multinex/lib/python3.9/site-packages/lpips/weights/v0.1/alex.pth
+Not using Automatic Mixed Precision
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+===>Testing using weights:  pretrained_weights/Multinex-Nano_LOL-v1.pth
+data/LOLv1/Test/input
+data/LOLv1/Test/target
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:00<00:07,  1.82it/s] 13%|█▎        | 2/15 [00:00<00:04,  3.18it/s] 20%|██        | 3/15 [00:00<00:02,  4.28it/s] 27%|██▋       | 4/15 [00:00<00:02,  5.12it/s] 33%|███▎      | 5/15 [00:01<00:01,  5.71it/s] 40%|████      | 6/15 [00:01<00:01,  6.17it/s] 47%|████▋     | 7/15 [00:01<00:01,  6.46it/s] 53%|█████▎    | 8/15 [00:01<00:01,  6.68it/s] 60%|██████    | 9/15 [00:01<00:00,  6.85it/s] 67%|██████▋   | 10/15 [00:01<00:00,  6.98it/s] 73%|███████▎  | 11/15 [00:01<00:00,  7.03it/s] 80%|████████  | 12/15 [00:02<00:00,  7.02it/s] 87%|████████▋ | 13/15 [00:02<00:00,  7.06it/s] 93%|█████████▎| 14/15 [00:02<00:00,  7.04it/s]100%|██████████| 15/15 [00:02<00:00,  7.11it/s]100%|██████████| 15/15 [00:02<00:00,  5.98it/s]
+RGB  - PSNR: 19.4172
+RGB  - SSIM: 0.7422
+LPIPS (alex): 0.276419
+Y    - PSNR_y: 22.1368
+Y    - SSIM_y: 0.8454
+Ch   - PSNR_c: 30.8428   (avg of Cb & Cr)
+Ch   - SSIM_c: 0.8934   (avg of Cb & Cr)
+EXIT=0

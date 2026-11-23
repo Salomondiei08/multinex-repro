@@ -1,0 +1,90 @@
+{
+ "best_image": {
+  "image": "665.png",
+  "ranked_by": "Multinex PSNR",
+  "multinex_psnr": 27.905455382865693,
+  "nano_psnr": 21.59597640923932
+ },
+ "worst_image": {
+  "image": "547.png",
+  "ranked_by": "Multinex PSNR",
+  "multinex_psnr": 16.075690235435225,
+  "nano_psnr": 17.670401249110434
+ },
+ "noref": {
+  "multinex": {
+   "DICM": {
+    "niqe": 3.5697,
+    "brisque": 17.0102
+   },
+   "MEF": {
+    "niqe": 3.1862,
+    "brisque": 11.8548
+   },
+   "NPE": {
+    "niqe": 3.834,
+    "brisque": 13.1432
+   },
+   "LIME": {
+    "niqe": 3.6048,
+    "brisque": 13.3962
+   },
+   "mean_of_4": {
+    "niqe": 3.5486750000000002,
+    "brisque": 13.8511
+   }
+  },
+  "nano": {
+   "DICM": {
+    "niqe": 3.655,
+    "brisque": 17.4048
+   },
+   "MEF": {
+    "niqe": 3.4472,
+    "brisque": 12.5519
+   },
+   "NPE": {
+    "niqe": 3.9402,
+    "brisque": 13.6987
+   },
+   "LIME": {
+    "niqe": 3.9167,
+    "brisque": 14.5438
+   },
+   "mean_of_4": {
+    "niqe": 3.7397750000000003,
+    "brisque": 14.5498
+   }
+  }
+ },
+ "noref_examples": {
+  "DICM": {
+   "file": "61.jpg",
+   "multinex_niqe": 1.794398,
+   "multinex_brisque": 6.271179,
+   "nano_niqe": 1.745145,
+   "nano_brisque": 8.443054
+  },
+  "LIME": {
+   "file": "10.bmp",
+   "multinex_niqe": 2.238064,
+   "multinex_brisque": 4.084167,
+   "nano_niqe": 2.370349,
+   "nano_brisque": 7.638855
+  },
+  "MEF": {
+   "file": "ChineseGarden.png",
+   "multinex_niqe": 1.812156,
+   "multinex_brisque": 6.770691,
+   "nano_niqe": 2.533863,
+   "nano_brisque": 8.617859
+  },
+  "NPE": {
+   "file": "night fall.JPG",
+   "multinex_niqe": 2.816528,
+   "multinex_brisque": 2.81073,
+   "nano_niqe": 3.023329,
+   "nano_brisque": 4.660828
+  }
+ }
+}

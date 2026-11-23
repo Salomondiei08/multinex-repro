@@ -1,0 +1,58 @@
+{
+  "vram_mb": {
+    "Multinex": {
+      "600x400": 424.51220703125,
+      "1920x1080": 3569.6650390625
+    },
+    "Multinex-Nano": {
+      "600x400": 53.75830078125,
+      "1920x1080": 393.0390625
+    }
+  },
+  "mine": [
+    {
+      "file": "DICM/18.JPG",
+      "resolution": "640x480",
+      "niqe_input": 6.9711047617796105,
+      "niqe_multinex": 3.211393,
+      "brisque_input": 44.88397216796875,
+      "brisque_multinex": 23.468933,
+      "ms_multinex": 265.1130882743746,
+      "ms_multinex_median": 277.6986400131136,
+      "rank_in_dataset": "35 of 69 by Multinex NIQE"
+    },
+    {
+      "file": "LIME/3.bmp",
+      "resolution": "500x375",
+      "niqe_input": 2.856715647045675,
+      "niqe_multinex": 2.747006,
+      "brisque_input": 13.94793701171875,
+      "brisque_multinex": 18.952332,
+      "ms_multinex": 174.77560210041702,
+      "ms_multinex_median": 189.36138227581978,
+      "rank_in_dataset": "5 of 10 by Multinex NIQE"
+    },
+    {
+      "file": "MEF/Memorial.png",
+      "resolution": "341x512",
+      "niqe_input": 3.3955612398145356,
+      "niqe_multinex": 2.816448,
+      "brisque_input": 6.64569091796875,
+      "brisque_multinex": 7.430359,
+      "ms_multinex": 157.77329878881574,
+      "ms_multinex_median": 170.24732334539294,
+      "rank_in_dataset": "9 of 17 by Multinex NIQE"
+    },
+    {
+      "file": "NPE/rail.jpg",
+      "resolution": "448x300",
+      "niqe_input": 3.6019122598474613,
+      "niqe_multinex": 3.532729,
+      "brisque_input": 4.75750732421875,
+      "brisque_multinex": 2.822937,
+      "ms_multinex": 123.82863041013479,
+      "ms_multinex_median": 128.28977243043482,
+      "rank_in_dataset": "4 of 8 by Multinex NIQE"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+/home/nlp-07/multinex_repro/Multinex/basicsr/models/image_restoration_model.py:69: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.amp_scaler = GradScaler(enabled=self.use_amp)
+export CUDA_VISIBLE_DEVICES=0
+Loading weights: /home/nlp-07/multinex_repro/Multinex/pretrained_weights/Multinex-Nano_dagger_NoRef.pth
+Not using Automatic Mixed Precision
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+
+=== Dataset: DICM ===
+Images (DICM):   0%|          | 0/69 [00:00<?, ?it/s]Images (DICM):   1%|▏         | 1/69 [00:00<00:56,  1.20it/s]Images (DICM):   3%|▎         | 2/69 [00:01<00:38,  1.76it/s]Images (DICM):   4%|▍         | 3/69 [00:01<00:30,  2.18it/s]Images (DICM):   6%|▌         | 4/69 [00:01<00:26,  2.46it/s]Images (DICM):   7%|▋         | 5/69 [00:02<00:24,  2.57it/s]Images (DICM):   9%|▊         | 6/69 [00:02<00:24,  2.61it/s]Images (DICM):  10%|█         | 7/69 [00:02<00:22,  2.72it/s]Images (DICM):  12%|█▏        | 8/69 [00:03<00:22,  2.75it/s]Images (DICM):  13%|█▎        | 9/69 [00:03<00:21,  2.74it/s]Images (DICM):  14%|█▍        | 10/69 [00:04<00:21,  2.76it/s]Images (DICM):  16%|█▌        | 11/69 [00:04<00:19,  3.00it/s]Images (DICM):  17%|█▋        | 12/69 [00:04<00:19,  2.92it/s]Images (DICM):  19%|█▉        | 13/69 [00:05<00:19,  2.88it/s]Images (DICM):  20%|██        | 14/69 [00:05<00:19,  2.88it/s]Images (DICM):  22%|██▏       | 15/69 [00:05<00:19,  2.84it/s]Images (DICM):  23%|██▎       | 16/69 [00:06<00:19,  2.79it/s]Images (DICM):  25%|██▍       | 17/69 [00:06<00:18,  2.85it/s]Images (DICM):  26%|██▌       | 18/69 [00:06<00:17,  2.85it/s]Images (DICM):  28%|██▊       | 19/69 [00:07<00:17,  2.80it/s]Images (DICM):  29%|██▉       | 20/69 [00:07<00:17,  2.85it/s]Images (DICM):  30%|███       | 21/69 [00:07<00:16,  2.86it/s]Images (DICM):  32%|███▏      | 22/69 [00:08<00:16,  2.79it/s]Images (DICM):  33%|███▎      | 23/69 [00:08<00:16,  2.85it/s]Images (DICM):  35%|███▍      | 24/69 [00:08<00:15,  2.85it/s]Images (DICM):  36%|███▌      | 25/69 [00:09<00:15,  2.80it/s]Images (DICM):  38%|███▊      | 26/69 [00:09<00:15,  2.83it/s]Images (DICM):  39%|███▉      | 27/69 [00:09<00:14,  2.95it/s]Images (DICM):  41%|████      | 28/69 [00:10<00:14,  2.87it/s]Images (DICM):  42%|████▏     | 29/69 [00:10<00:16,  2.39it/s]Images (DICM):  43%|████▎     | 30/69 [00:11<00:18,  2.13it/s]Images (DICM):  45%|████▍     | 31/69 [00:12<00:18,  2.01it/s]Images (DICM):  46%|████▋     | 32/69 [00:12<00:20,  1.83it/s]Images (DICM):  48%|████▊     | 33/69 [00:13<00:19,  1.85it/s]Images (DICM):  49%|████▉     | 34/69 [00:13<00:20,  1.72it/s]Images (DICM):  51%|█████     | 35/69 [00:14<00:17,  1.95it/s]Images (DICM):  52%|█████▏    | 36/69 [00:14<00:15,  2.08it/s]Images (DICM):  54%|█████▎    | 37/69 [00:15<00:14,  2.23it/s]Images (DICM):  55%|█████▌    | 38/69 [00:15<00:12,  2.39it/s]Images (DICM):  57%|█████▋    | 39/69 [00:15<00:12,  2.42it/s]Images (DICM):  58%|█████▊    | 40/69 [00:16<00:12,  2.41it/s]Images (DICM):  59%|█████▉    | 41/69 [00:16<00:10,  2.62it/s]Images (DICM):  61%|██████    | 42/69 [00:16<00:10,  2.59it/s]Images (DICM):  62%|██████▏   | 43/69 [00:17<00:10,  2.58it/s]Images (DICM):  64%|██████▍   | 44/69 [00:17<00:09,  2.72it/s]Images (DICM):  65%|██████▌   | 45/69 [00:18<00:09,  2.57it/s]/home/nlp-07/miniforge3/envs/multinex/lib/python3.9/site-packages/numpy/_core/fromnumeric.py:3596: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/nlp-07/miniforge3/envs/multinex/lib/python3.9/site-packages/numpy/_core/_methods.py:138: RuntimeWarning: invalid value encountered in divide
+  ret = ret.dtype.type(ret / rcount)
+Images (DICM):  67%|██████▋   | 46/69 [00:18<00:08,  2.57it/s]Images (DICM):  68%|██████▊   | 47/69 [00:18<00:08,  2.55it/s]Images (DICM):  70%|██████▉   | 48/69 [00:19<00:08,  2.45it/s]Images (DICM):  71%|███████   | 49/69 [00:19<00:08,  2.48it/s]Images (DICM):  72%|███████▏  | 50/69 [00:20<00:07,  2.45it/s]Images (DICM):  74%|███████▍  | 51/69 [00:20<00:07,  2.54it/s]Images (DICM):  75%|███████▌  | 52/69 [00:20<00:06,  2.66it/s]Images (DICM):  77%|███████▋  | 53/69 [00:21<00:06,  2.55it/s]Images (DICM):  78%|███████▊  | 54/69 [00:21<00:06,  2.48it/s]Images (DICM):  80%|███████▉  | 55/69 [00:22<00:05,  2.50it/s]Images (DICM):  81%|████████  | 56/69 [00:22<00:05,  2.50it/s]Images (DICM):  83%|████████▎ | 57/69 [00:22<00:04,  2.51it/s]Images (DICM):  84%|████████▍ | 58/69 [00:23<00:04,  2.46it/s]Images (DICM):  86%|████████▌ | 59/69 [00:23<00:04,  2.46it/s]Images (DICM):  87%|████████▋ | 60/69 [00:24<00:03,  2.47it/s]Images (DICM):  88%|████████▊ | 61/69 [00:24<00:03,  2.50it/s]Images (DICM):  90%|████████▉ | 62/69 [00:24<00:02,  2.43it/s]Images (DICM):  91%|█████████▏| 63/69 [00:25<00:02,  2.46it/s]Images (DICM):  93%|█████████▎| 64/69 [00:25<00:02,  2.38it/s]Images (DICM):  94%|█████████▍| 65/69 [00:26<00:01,  2.51it/s]Images (DICM):  96%|█████████▌| 66/69 [00:26<00:01,  2.56it/s]Images (DICM):  97%|█████████▋| 67/69 [00:26<00:00,  2.50it/s]Images (DICM):  99%|█████████▊| 68/69 [00:27<00:00,  2.49it/s]Images (DICM): 100%|██████████| 69/69 [00:27<00:00,  2.62it/s]Images (DICM): 100%|██████████| 69/69 [00:27<00:00,  2.50it/s]
+
+--- DICM Results ---
+Weights: Multinex-Nano_dagger_NoRef
+NIQE:    3.6550
+BRISQUE: 17.4048
+
+=== Dataset: MEF ===
+Images (MEF):   0%|          | 0/17 [00:00<?, ?it/s]Images (MEF):   6%|▌         | 1/17 [00:00<00:04,  3.77it/s]Images (MEF):  12%|█▏        | 2/17 [00:00<00:04,  3.37it/s]Images (MEF):  18%|█▊        | 3/17 [00:00<00:03,  3.56it/s]Images (MEF):  24%|██▎       | 4/17 [00:01<00:03,  4.07it/s]Images (MEF):  29%|██▉       | 5/17 [00:01<00:03,  3.82it/s]Images (MEF):  35%|███▌      | 6/17 [00:01<00:02,  3.79it/s]Images (MEF):  41%|████      | 7/17 [00:01<00:02,  3.98it/s]Images (MEF):  47%|████▋     | 8/17 [00:02<00:02,  4.04it/s]Images (MEF):  53%|█████▎    | 9/17 [00:02<00:01,  4.44it/s]Images (MEF):  59%|█████▉    | 10/17 [00:02<00:01,  4.25it/s]Images (MEF):  65%|██████▍   | 11/17 [00:02<00:01,  4.06it/s]Images (MEF):  71%|███████   | 12/17 [00:03<00:01,  3.98it/s]Images (MEF):  76%|███████▋  | 13/17 [00:03<00:00,  4.11it/s]Images (MEF):  82%|████████▏ | 14/17 [00:03<00:00,  4.04it/s]Images (MEF):  88%|████████▊ | 15/17 [00:03<00:00,  3.96it/s]Images (MEF):  94%|█████████▍| 16/17 [00:04<00:00,  3.91it/s]Images (MEF): 100%|██████████| 17/17 [00:04<00:00,  3.97it/s]Images (MEF): 100%|██████████| 17/17 [00:04<00:00,  3.97it/s]
+
+--- MEF Results ---
+Weights: Multinex-Nano_dagger_NoRef
+NIQE:    3.4472
+BRISQUE: 12.5519
+
+=== Dataset: NPE ===
+Images (NPE):   0%|          | 0/8 [00:00<?, ?it/s]Images (NPE):  12%|█▎        | 1/8 [00:00<00:01,  4.32it/s]Images (NPE):  25%|██▌       | 2/8 [00:00<00:02,  2.44it/s]Images (NPE):  38%|███▊      | 3/8 [00:01<00:01,  2.85it/s]Images (NPE):  50%|█████     | 4/8 [00:01<00:01,  2.71it/s]Images (NPE):  62%|██████▎   | 5/8 [00:01<00:00,  3.12it/s]Images (NPE):  75%|███████▌  | 6/8 [00:02<00:00,  3.00it/s]Images (NPE):  88%|████████▊ | 7/8 [00:02<00:00,  3.60it/s]Images (NPE): 100%|██████████| 8/8 [00:02<00:00,  3.96it/s]Images (NPE): 100%|██████████| 8/8 [00:02<00:00,  3.34it/s]
+
+--- NPE Results ---
+Weights: Multinex-Nano_dagger_NoRef
+NIQE:    3.9402
+BRISQUE: 13.6987
+
+=== Dataset: LIME ===
+Images (LIME):   0%|          | 0/10 [00:00<?, ?it/s]Images (LIME):  10%|█         | 1/10 [00:00<00:04,  1.96it/s]Images (LIME):  20%|██        | 2/10 [00:01<00:04,  1.66it/s]Images (LIME):  30%|███       | 3/10 [00:01<00:03,  2.16it/s]Images (LIME):  40%|████      | 4/10 [00:01<00:02,  2.58it/s]Images (LIME):  50%|█████     | 5/10 [00:01<00:01,  3.10it/s]Images (LIME):  60%|██████    | 6/10 [00:04<00:04,  1.03s/it]Images (LIME):  70%|███████   | 7/10 [00:04<00:02,  1.32it/s]Images (LIME):  80%|████████  | 8/10 [00:04<00:01,  1.66it/s]Images (LIME):  90%|█████████ | 9/10 [00:05<00:00,  2.00it/s]Images (LIME): 100%|██████████| 10/10 [00:05<00:00,  2.33it/s]Images (LIME): 100%|██████████| 10/10 [00:05<00:00,  1.86it/s]
+
+--- LIME Results ---
+Weights: Multinex-Nano_dagger_NoRef
+NIQE:    3.9167
+BRISQUE: 14.5438
+EXIT=0

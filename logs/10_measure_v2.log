@@ -1,0 +1,55 @@
+== nvidia-smi before
+index, utilization.gpu [%], memory.used [MiB]
+0, 98 %, 35069 MiB
+1, 100 %, 34799 MiB
+2, 100 %, 33005 MiB
+3, 98 %, 35677 MiB
+4, 93 %, 35407 MiB
+5, 99 %, 33623 MiB
+6, 98 %, 36083 MiB
+7, 98 %, 35809 MiB
+/home/nlp-07/multinex_repro/Multinex/basicsr/models/image_restoration_model.py:69: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.amp_scaler = GradScaler(enabled=self.use_amp)
+Not using Automatic Mixed Precision
+self.C = 45
+self.C = 28
+self.C = 36
+self.C = 41
+self.C = 38
+self.C = 40
+self.C = 39
+self.C = 39
+self.C = 39
+self.C = 39
+Multinex 600x400 max_memory_allocated MB 424.51220703125
+Multinex 1920x1080 max_memory_allocated MB 3569.6650390625
+Not using Automatic Mixed Precision
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+Multinex-Nano 600x400 max_memory_allocated MB 53.75830078125
+Multinex-Nano 1920x1080 max_memory_allocated MB 393.0390625
+Not using Automatic Mixed Precision
+self.C = 45
+self.C = 28
+self.C = 36
+self.C = 41
+self.C = 38
+self.C = 40
+self.C = 39
+self.C = 39
+self.C = 39
+self.C = 39
+{'file': 'DICM/18.JPG', 'resolution': '640x480', 'niqe_input': 6.9711047617796105, 'niqe_multinex': 3.211393, 'brisque_input': 44.88397216796875, 'brisque_multinex': 23.468933, 'ms_multinex': 265.1130882743746, 'ms_multinex_median': 277.6986400131136, 'rank_in_dataset': '35 of 69 by Multinex NIQE'}
+{'file': 'LIME/3.bmp', 'resolution': '500x375', 'niqe_input': 2.856715647045675, 'niqe_multinex': 2.747006, 'brisque_input': 13.94793701171875, 'brisque_multinex': 18.952332, 'ms_multinex': 174.77560210041702, 'ms_multinex_median': 189.36138227581978, 'rank_in_dataset': '5 of 10 by Multinex NIQE'}
+{'file': 'MEF/Memorial.png', 'resolution': '341x512', 'niqe_input': 3.3955612398145356, 'niqe_multinex': 2.816448, 'brisque_input': 6.64569091796875, 'brisque_multinex': 7.430359, 'ms_multinex': 157.77329878881574, 'ms_multinex_median': 170.24732334539294, 'rank_in_dataset': '9 of 17 by Multinex NIQE'}
+{'file': 'NPE/rail.jpg', 'resolution': '448x300', 'niqe_input': 3.6019122598474613, 'niqe_multinex': 3.532729, 'brisque_input': 4.75750732421875, 'brisque_multinex': 2.822937, 'ms_multinex': 123.82863041013479, 'ms_multinex_median': 128.28977243043482, 'rank_in_dataset': '4 of 8 by Multinex NIQE'}
+wrote ../logs/10_measure_v2.json
+EXIT=0

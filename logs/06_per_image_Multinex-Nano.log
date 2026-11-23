@@ -1,0 +1,24 @@
+/home/nlp-07/multinex_repro/Multinex/basicsr/models/image_restoration_model.py:69: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.amp_scaler = GradScaler(enabled=self.use_amp)
+/home/nlp-07/miniforge3/envs/multinex/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/nlp-07/miniforge3/envs/multinex/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Not using Automatic Mixed Precision
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+self.C = 3
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /home/nlp-07/miniforge3/envs/multinex/lib/python3.9/site-packages/lpips/weights/v0.1/alex.pth
+Multinex-Nano mean psnr: 19.417220  (test.py log: 19.4172)
+Multinex-Nano mean ssim: 0.742246  (test.py log: 0.7422)
+Multinex-Nano mean lpips: 0.276419  (test.py log: 0.276419)
+wrote ../logs/06_per_image_Multinex-Nano.csv
+EXIT=0
